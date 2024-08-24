@@ -1,0 +1,11 @@
+a. Install Prometheus
+Download and install Prometheus on your system. You can follow the official Prometheus documentation for installation instructions.
+
+b. Configure Prometheus
+scrape_configs:
+  - job_name: 'python_script'
+    static_configs:
+      - targets: ['localhost:8000']
+
+Start Prometheus using this configuration:
+./prometheus --config.file=prometheus.yml
